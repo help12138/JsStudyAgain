@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // let symValue = Symbol();
+            // let symFoo = Symbol("foo");
+            // console.log(symValue, "这是一个symbol值");
+
+            // let symForValue = Symbol.for(15);
+            // console.log(Symbol.keyFor(symForValue));
+
+            // let s1 = Symbol("foo");
+            // let s2 = Symbol("bar");
+            // let s3 = Symbol("baz");
+
+            // let symOb = {
+            //     [s1]: "foo val",
+            // };
+            // symOb[s2] = "bar val";
+            // console.log(symOb[s1]);
+
+            let s1 = Symbol("foo");
+            let s2 = Symbol("bar");
+            let o = {
+                [s1]: "foo val",
+                [s2]: "bar val",
+                baz: "baz val",
+                qux: "qux val",
+            };
+
+            console.log(Object.getOwnPropertySymbols(o));
+            console.log(Object.getOwnPropertyNames(o));
+            console.log(Object.getOwnPropertyDescriptors(0));
+            console.log(Reflect.ownKeys(o));
+        </script>
+    </body>
+</html>
